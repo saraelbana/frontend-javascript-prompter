@@ -72,3 +72,66 @@ const departments = {
 }
 
 console.log(departments);
+//Opdracht 1a:
+console.log("Number of sales department employees is "+ departments.sales.numberOfEmployees);
+//Opdracht 1b
+console.log(" Marketing is een leuke afdeling om te werken." + departments.marketing.description);
+//Opdracht 1c:
+console.log("De afdeling Customer Service heeft " + departments["customer-service"].numberOfEmployees + " medewerkers");
+//Opdracht 1d:
+console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager" + departments.sales.jobs[1].description);
+
+//Opdracht 2a
+let userInput = prompt('Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]');
+const departmentInput = userInput.toLowerCase();
+console.log(departmentInput);
+//Opdracht 2b
+//Opdracht 2c
+if(departments.hasOwnProperty(departmentInput)){
+    console.log("Je koos " + departmentInput + " " + departments[departmentInput].description);
+}
+else{
+    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen");
+}
+
+/*
+//Opdracht 3a
+ userInput = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. " +
+     '\n0:' + departments["marketing"].jobs[0].title +
+     '\n1:' + departments["marketing"].jobs[1].title +
+     '\n2:' + departments["marketing"].jobs[2].title);
+userInput = userInput.toLowerCase();
+//Opdracht 3b
+//Opdracht 3c
+switch (userInput){
+    case '0':
+        console.log("Je koos "+ departments["marketing"].jobs[0].title + " Een uitdagende rol! " +departments["marketing"].jobs[0].description);
+        ;
+        break;
+    case'1':
+        console.log("Je koos "+ departments["marketing"].jobs[1].title + " Een uitdagende rol! " +departments["marketing"].jobs[1].description);
+        break;
+    case '2':
+        console.log("Je koos "+ departments["marketing"].jobs[2].title + " Een uitdagende rol! " +departments["marketing"].jobs[2].description);
+        break;
+    default:
+        console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen");
+}
+*/
+
+//Opdracht 4a
+console.log(departments[userInput].title + " is een leuke afdeling om te werken. Er werken op dit moment "+ departments[userInput].numberOfEmployees +" medewerkers");
+//Opdracht 4b
+userInput = prompt("Je koos " + userInput+". Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. " +
+    '\n0:' + departments[userInput].jobs[0].title +
+    '\n1:' + departments[userInput].jobs[1].title +
+    '\n2:' + departments[userInput].jobs[2].title +
+    '\n3:' + departments[userInput].jobs[3].title);
+//Opdracht 4c
+let numericUSerInput = parseInt(userInput);
+if(numericUSerInput === 0 || numericUSerInput === 1 || numericUSerInput === 2 || numericUSerInput === 3) {
+    console.log("Je koos "+ departments[departmentInput].jobs[numericUSerInput].title + " Een uitdagende rol! " +departments[departmentInput].jobs[numericUSerInput].description);
+}
+else{
+        console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen");
+}
