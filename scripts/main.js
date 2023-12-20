@@ -119,3 +119,22 @@ switch (userInput){
         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen");
 }
 */
+
+//Opdracht 4a
+console.log(departments[userInput].title + " is een leuke afdeling om te werken. Er werken op dit moment "+ departments[userInput].numberOfEmployees +" medewerkers");
+//Opdracht 4b
+userInput = prompt("Je koos " + userInput+". Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. " +
+    '\n0:' + departments[userInput].jobs[0].title +
+    '\n1:' + departments[userInput].jobs[1].title +
+    '\n2:' + departments[userInput].jobs[2].title +
+    '\n3:' + departments[userInput].jobs[3].title);
+//Opdracht 4c
+let numericUSerInput = parseInt(userInput);
+if(numericUSerInput === 0 || numericUSerInput === 1 || numericUSerInput === 2 || numericUSerInput === 3) {
+    console.log("Je koos "+ departments[departmentInput].jobs[numericUSerInput].title + " Een uitdagende rol! " +departments[departmentInput].jobs[numericUSerInput].description);
+}
+else{
+    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen");
+}
+//comments should be shown here below this code
+
