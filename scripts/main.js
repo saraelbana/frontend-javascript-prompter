@@ -133,5 +133,6 @@ if(numericUSerInput === 0 || numericUSerInput === 1 || numericUSerInput === 2 ||
     console.log("Je koos "+ departments[departmentInput].jobs[numericUSerInput].title + " Een uitdagende rol! " +departments[departmentInput].jobs[numericUSerInput].description);
 }
 else{
-        console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen");
+    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen");
 }
+//comments should be shown here below this code
